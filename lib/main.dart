@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const HomePage_Web(),
-      home: const HomePageWithNavbar(),
+      home: HomePageWithNavbar(),
     );
   }
 }

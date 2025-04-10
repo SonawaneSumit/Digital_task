@@ -158,7 +158,7 @@ class _GroceryHomePageState extends State<GroceryHomePage> {
       child: CircleAvatar(
           radius: 30,
           backgroundColor: name == "assets/Mobile/All_Brands.png"
-              ? Color(0xff438130)
+              ? const Color(0xff438130)
               : Colors.white,
           child: Padding(
             padding: EdgeInsets.all(
@@ -217,8 +217,8 @@ class CategoryCard extends StatelessWidget {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             gradient: LinearGradient(colors: [
-              Color(0xff53B175).withOpacity(0.6),
-              Color(0xff53B175).withOpacity(0.4),
+              const Color(0xff53B175).withOpacity(0.6),
+              const Color(0xff53B175).withOpacity(0.4),
             ])),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -227,7 +227,7 @@ class CategoryCard extends StatelessWidget {
                 height: height * 0.09, width: width * 0.4),
             Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 9.0, vertical: 2.0),
+                  const EdgeInsets.symmetric(horizontal: 9.0, vertical: 0.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -235,8 +235,8 @@ class CategoryCard extends StatelessWidget {
                     child: Text(
                       title,
                       textAlign: TextAlign.center,
-                      style:
-                          TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
+                      style: const TextStyle(
+                          fontSize: 10, fontWeight: FontWeight.w500),
                     ),
                   ),
                 ],
@@ -314,9 +314,9 @@ class ProductCard extends StatelessWidget {
                       Text(weight,
                           style: const TextStyle(
                               fontWeight: FontWeight.bold, color: Colors.grey)),
-                      Text(
+                      const Text(
                         "₹ 199.00",
-                        style: const TextStyle(
+                        style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.grey,
                             decoration: TextDecoration.lineThrough),
@@ -352,11 +352,11 @@ class ProductCard extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xffFFC700),
+                      backgroundColor: const Color(0xffFFC700),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       )),
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Icon(
@@ -374,7 +374,7 @@ class ProductCard extends StatelessWidget {
                 const SizedBox(height: 5),
                 ElevatedButton(
                   onPressed: () {},
-                  child: Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
@@ -389,7 +389,7 @@ class ProductCard extends StatelessWidget {
                     ],
                   ),
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xff438130),
+                      backgroundColor: const Color(0xff438130),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       )),
@@ -402,13 +402,13 @@ class ProductCard extends StatelessWidget {
             child: Container(
                 decoration: BoxDecoration(
                   color: Colors.pink.shade800,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(10),
                     topRight: Radius.circular(10),
                   ),
                 ),
                 padding: const EdgeInsets.all(4),
-                child: Text("Rs. 40/- OFF*",
+                child: const Text("Rs. 40/- OFF*",
                     style: TextStyle(color: Colors.white, fontSize: 10))),
           )
         ],
