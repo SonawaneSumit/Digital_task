@@ -1,21 +1,23 @@
+import 'package:digital_test/view/Mobile/Profile.dart';
+import 'package:digital_test/view/Mobile/carScreen.dart';
 import 'package:digital_test/view/Mobile/customNav.dart';
 import 'package:digital_test/view/Mobile/homepage_mobile.dart';
 import 'package:flutter/material.dart';
 
-class HomePageWithNavbar extends StatefulWidget {
-  const HomePageWithNavbar({super.key});
+class MainHomePage extends StatefulWidget {
+  const MainHomePage({super.key});
 
   @override
-  State<HomePageWithNavbar> createState() => _HomePageWithNavbarState();
+  State<MainHomePage> createState() => _HomePageWithNavbarState();
 }
 
-class _HomePageWithNavbarState extends State<HomePageWithNavbar> {
+class _HomePageWithNavbarState extends State<MainHomePage> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
     const GroceryHomePage(),
-    const Center(child: Text("Cart")),
-    const Center(child: Text("Profile")),
+    const CartScreen(),
+    const ProfileScreen(),
   ];
 
   void _onTabSelected(int index) {
@@ -27,6 +29,7 @@ class _HomePageWithNavbarState extends State<HomePageWithNavbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: _pages[_currentIndex],
       bottomNavigationBar: CustomBottomNavBar(
         currentIndex: _currentIndex,

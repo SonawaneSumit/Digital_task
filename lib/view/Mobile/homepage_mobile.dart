@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:digital_test/view/Mobile/customNav.dart';
+import 'package:digital_test/widget/appBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -31,21 +32,7 @@ class _GroceryHomePageState extends State<GroceryHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: const Icon(Icons.menu),
-        title: const Text(
-          "LOGO",
-          style: TextStyle(color: Colors.pink, fontWeight: FontWeight.bold),
-        ),
-        actions: const [
-          Icon(Icons.shopping_cart),
-          SizedBox(width: 10),
-          Icon(Icons.person),
-          SizedBox(width: 10),
-        ],
-        backgroundColor: Colors.white,
-        elevation: 0,
-      ),
+      appBar: commonAppbar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
           bool isDesktop = constraints.maxWidth > 800;
@@ -107,7 +94,6 @@ class _GroceryHomePageState extends State<GroceryHomePage> {
                   CategoryCard("Cleaning & Household", 5),
                 ],
               ),
-              const SizedBox(height: 20),
               sectionTitle("Featured Product"),
               const SizedBox(height: 10),
               const SingleChildScrollView(
@@ -134,6 +120,9 @@ class _GroceryHomePageState extends State<GroceryHomePage> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 100,
+              )
             ],
           );
         },

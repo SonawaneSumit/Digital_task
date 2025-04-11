@@ -146,7 +146,6 @@ class _ProductCardState extends State<ProductCard> {
       onTap: () {},
       child: Card(
         color: Colors.white,
-        // elevation: 3,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         child: FittedBox(
           child: Container(
@@ -171,8 +170,6 @@ class _ProductCardState extends State<ProductCard> {
                   style:
                       TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
                 ),
-
-                // Icon(Icons.shopping_bag, size: 40, color: Colors.grey[700]),
                 const SizedBox(height: 6),
                 Container(
                   decoration: BoxDecoration(
@@ -221,12 +218,11 @@ class CartSummary extends StatelessWidget {
                   color: Colors.grey.withOpacity(0.5),
                   spreadRadius: 2,
                   blurRadius: 5,
-                  offset: const Offset(0, 3), // changes position of shadow
+                  offset: const Offset(0, 3),
                 ),
               ],
               borderRadius: BorderRadius.circular(12)),
           child: Column(
-            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text('Cart Summary',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),

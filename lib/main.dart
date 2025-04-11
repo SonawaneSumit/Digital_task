@@ -1,3 +1,4 @@
+import 'package:digital_test/splashScreen.dart';
 import 'package:digital_test/view/Mobile/homepage_mobile.dart';
 import 'package:digital_test/view/Mobile/mainHomePage.dart';
 import 'package:digital_test/view/homepage_Web.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const HomePage_Web(),
-      home: HomePageWithNavbar(),
+      home: const splashscreen(),
     );
   }
 }
